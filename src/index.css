@@ -119,7 +119,7 @@
     flex-direction: column;
     align-items: center;
     background-image: linear-gradient(rgba(0, 0, 0, 0.786), rgba(0, 0, 0, 0.252)), url("https://angelusnews.com/wp-content/uploads/2019/09/y4tr14acs_shutterstock_235763467.jpg");
-    background-size: contain;
+    background-size: cover;
     background-position: 900px;
     justify-content: flex-start;
     height: auto;
