@@ -66,7 +66,7 @@ const Rosary = () => {
         }
     };
 
-
+    
 
     return (
         <>
@@ -115,9 +115,10 @@ const Rosary = () => {
 
                 <h1>Rosary:</h1>
                 <h3>Zone:</h3>
-                <h3>Location:</h3>
+               
+         
                 <ul>
-                    <li>lat: long:</li>
+                    <li>lat:{ } long:</li>
                 </ul>
             </div>
         </>
