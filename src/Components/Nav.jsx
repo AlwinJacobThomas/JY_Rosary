@@ -1,12 +1,18 @@
-import { Link } from "react-router-dom";
-import { useRef, useState } from 'react';
+import { Link} from "react-router-dom";
+import { useRef, useState, useParams } from 'react';
 
 const Nav = () => {
     const navRef = useRef();
     const showNavBar = () => {
         navRef.current.classList.toggle("responsive_nav") //this classname will be add/removed on toggle
     }
-
+    // const history = useHistory();
+    const [rosary_id, setRosaryId] = useState('');
+    
+    // const handleClick = () => {
+    //     // Navigate to localhost/rosary_id
+    //     history.push(`/${rosary_id}`);
+    // };
     return (
         <>
             <nav className="navbar">
@@ -22,8 +28,10 @@ const Nav = () => {
                     <Link className='link' to="/contact">Contact</Link>
                 </div>
                 <div className="access_code_desktop">
-                    <input placeholder='Type Code' type="text" name='rosary_id' /><h3>/</h3>
-                    <button className='btn' >Scan QR</button>
+                    <input placeholder='Type Code'   type="text" name='rosary_id' value={rosary_id} />
+                    {/* onChange={(e) => setRosaryId(e.target.value)} */}
+                    <button className='btn' >Find Rosary</button>
+                    {/* onClick={handleClick} */}
                 </div>
                 <button className="open_nav_btn">Open Nav</button>
             </nav>
