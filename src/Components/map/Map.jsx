@@ -5,7 +5,7 @@ import MarkerClusterGroup from 'react-leaflet-cluster'
 import { Icon ,divIcon} from 'leaflet';
 export default function Map() {
   const [center, setCenter] = useState([10.23604, 76.51952]);
-  const zoom = 7;
+  const zoom = 6;
   const markers = [
     {
       geocode: [10.0122, 76.3562],
@@ -87,7 +87,6 @@ export default function Map() {
 
   return (
     <div id='map-container'>
-
       <MapContainer
         center={center}
         zoom={zoom}>
@@ -95,6 +94,7 @@ export default function Map() {
           url='https://tile.openstreetmap.org/{z}/{x}/{y}.png'
           attribution='<a href="https://www.openstreetmap.org/copyright" target="_blank">&copy; OpenStreetMap contributors</a>'
         />
+        
         {/* chunkedLoading is used to avoid massive loading */}
         <MarkerClusterGroup 
         chunkedLoading

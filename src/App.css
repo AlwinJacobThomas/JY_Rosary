@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
+
+/*--------------------------- navbar --------------------- */
 * {
     margin: 0;
     padding: 0;
@@ -42,7 +44,7 @@
     font-style: italic;
 }
 
-.navbar .main_nav_desktop {
+/* .navbar .main_nav_desktop {
     display: flex;
     gap: 8px;
     align-items: center;
@@ -60,7 +62,7 @@
 .navbar .main_nav_desktop a.active {
     background-color: #329cff;
     color: #fff;
-}
+} */
 
 .navbar .access_code_desktop {
     display: flex;
@@ -92,7 +94,10 @@
 }
 
 .navbar .open_nav_btn {
-    display: none;
+    /* display: none; */
+    background: transparent;
+    border: none;
+    font-size: large;
 }
 
 .full_nav {
@@ -102,14 +107,40 @@
     width: 100vw;
     height: 100vh;
     z-index: 999;
-    background-color: #040404;
+    background: rgba(0, 0, 0, 0.826);
     overflow: hidden;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-evenly;
-    row-gap: 32px;
+    /* justify-content: center; */
+    padding-top: 10vh;
+    gap: 10vh;
     display: none;
+}
+
+.full_nav.active {
+    display: flex;
+}
+
+.full_nav .full_nav_close_btn {
+    position: fixed;
+    top: 32px;
+    right: 32px;
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
+    cursor: pointer;
+    background-color: transparent;
+    outline: none;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: large;
+}
+
+.full_nav .full_nav_close_btn svg path {
+    fill: #fff;
 }
 
 .full_nav li {
@@ -121,18 +152,22 @@
     text-decoration: none;
     color: #fff;
     transition: 1s;
+    text-transform: uppercase;
+    font-weight: 600;
+    text-shadow: 2px 2px 3px #00000019;
 }
 
 .full_nav li a::before {
     content: '';
     display: block;
     width: 0%;
-    height: 5px;
-    background-color: #fff;
+    height: 10px;
+    background-color: #34a4a7;
     position: relative;
     top: 50%;
     transition: width 0.3s ease;
-    /* Add a transition for a smooth effect */
+    z-index: -1;
+    box-shadow: 2px 2px 3px #00000019;
 }
 
 /* Apply the styles only when the anchor is being hovered */
@@ -153,13 +188,18 @@
     .navbar .open_nav_btn {
         display: flex;
     }
-}
 
-@media only screen and (max-width: 1024px) {
-    .navbar .main_nav_desktop {
-        display: none;
+    .full_nav li {
+        font-size: 40px;
+    }
+
+    .full_nav {
+
+        gap: 10vh;
     }
 }
+
+
 
 /* Content */
 .content {
@@ -257,7 +297,7 @@ p {
     border-radius: 20px;
 }
 
-.icons a.ico avg path{
+.icons a.ico avg path {
     fill: #00091B;
 }
 
@@ -270,8 +310,8 @@ p {
     text-decoration: none;
 }
 
-.icons a.ico:hover > svg path,
-.icons a.ico:active > svg path {
+.icons a.ico:hover>svg path,
+.icons a.ico:active>svg path {
     fill: #fff;
 }
 
@@ -284,3 +324,6 @@ p {
 .counter_wrapper .card__back {
     width: 8vw;
 }
+
+/*------------------- navbar ends here------------------------ */
+

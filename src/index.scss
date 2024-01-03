@@ -1,296 +1,209 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Montserrat:wght@100;200;300;400;500;600&family=Ubuntu:wght@300;400;500;700&display=swap');
+
 //  color: #34a4a7;
 // color: #0c6cff;
 //  color: #273e6c;
 //  color: #399ebc;
-// body{
-  
-//   padding: 0;
-//   margin: 0;
-// }
-// .page-container {
-//   display: flex;
-//   flex-direction: column;
-//   font-family: 'Poppins', sans-serif;
-  
-//   .bg {
-//     position: absolute;
-//     z-index: -1;
-//     // width: 100%;
-//     height: 100vh;
-//   }
-// }
+.section1 {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 10px;
+  padding: 10px;
+  color: #fff;
+  font-family: 'Ubuntu', sans-serif;
 
-// .header {
-//   z-index: 5;
-//   display: flex;
-//   box-sizing: border-box;
-//   padding: 0.5rem 1rem;
-//   align-items: center;
-//   justify-content: space-between;
-//   // background: #1942b1;
-//   position: fixed;
-//   top: 0;
-//   left: 0;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.749)),
+    url('https://wp.en.aleteia.org/wp-content/uploads/sites/2/2017/08/web3-rosary-praying-devotion-ruggiero-scardigno-via-shutterstock_115129918.jpg');
+  background-size: contain;
+  .heading {
+    width: 35%;
+    .section1-title {
+      font-family: 'Ubuntu', sans-serif;
+      span {
+        font-family: 'Ubuntu', sans-serif;
+        color: #34a4a7;
+        font-weight: 600;
+      }
+    }
+    .section1-subtitle {
+      margin-top: 1rem;
+    }
+    .section1-desc {
+      margin: 0;
+      text-align: left;
+      margin-top: 2rem;
+      font-family: 'Montserrat', sans-serif;
+    }
+  }
+  .video_container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40rem;
+    height: 25rem;
+  }
+}
+.section2 {
+  height: 100vh;
+  padding: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 10px;
+  background: #fdfdfd;
+  color: #34a4a7;
+  .info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 10px;
+  }
+  .info-containers {
+    padding: 10px;
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+    border-radius: 10px;
+    border: 1px solid #34a4a7;
+    p {
+      margin: 0;
+      text-align: left;
+    }
+    h2 {
+      margin: 0;
+    }
+  }
+  .info-containers:hover {
+    background: #34a4a7;
+    color: #fff;
+  }
+}
+.section3 {
+  // background: #ffff;
+  color: #34a4a7;
+  height: 100vh;
+  padding: 2rem;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  .title {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  //maps
+  #map-container {
+    margin-top: 3rem;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 10px;
+    
+    width: 100%;
+  }
 
-//   .logo {
-//     font-family: 'Poppins', sans-serif;
-//     font-weight: 400;
-//     font-size: 0.9rem;
-//     display: flex;
-//     gap: 10px;
-//     align-items: center;
+  .leaflet-container {
    
-//     img {
-//       width: 3rem;
-//     }
-//   }
+    height: 70vh;
+    width: 80%;
+  }
 
-//   nav {
+  .cluster-icon {
+    width: 3rem;
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-weight: 600;
+    padding: 0.4rem;
+    color: #ffff;
+    background: radial-gradient(
+      circle,
+      rgba(34, 124, 201, 1) 0%,
+      rgba(48, 128, 202, 1) 56%,
+      rgba(46, 109, 150, 1) 100%
+    );
+  }
+}
+@media only screen and (max-width: 1024px) {
+  .section1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: linear-gradient(
+        rgba(0, 0, 0, 0.786),
+        rgba(0, 0, 0, 0.252)
+      ),
+      url('https://angelusnews.com/wp-content/uploads/2019/09/y4tr14acs_shutterstock_235763467.jpg');
+    background-size: contain;
+    background-position: 900px;
+    justify-content: flex-start;
+    height: auto;
+    .heading {
+      display: flex;
+      width: auto;
+      justify-content: center;
+      // align-items: center;
+      flex-direction: column;
+      gap: 10px;
+      padding: 10px;
+      color: #fff;
+      font-family: 'Ubuntu', sans-serif;
+
+      .section1-title {
+        span {
+          color: #34a4a7;
+          font-family: 'Ubuntu', sans-serif;
+        }
+      }
+      .section1-subtitle {
+        margin-top: 1rem;
+      }
+      .section1-desc {
+        margin: 0;
+        text-align: left;
+        margin-top: 2rem;
+      }
+    }
+    .video_container {
+      margin-top: 5rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 23rem;
+      height: 12rem;
+      border: 4px solid #34a4a7;
+      border-radius: 10px;
+    }
+  }
+
+  .section2 {
+    color: #34a4a7;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    // background-image: linear-gradient(rgba(0, 0, 0, 0.786), rgba(0, 0, 0, 0.252));
+    //   url('https://angelusnews.com/wp-content/uploads/2019/09/y4tr14acs_shutterstock_235763467.jpg');
+    background-size: contain;
+    background-position: 900px;
+    justify-content: flex-start;
+    height: auto;
+  }
+  .section3{
     
-//     display: flex;
-//     align-items: center;
-//     color: #34a4a7;
-//     list-style: none;
-//     gap: 1rem;
-//     font-weight: 500;
-//     padding: 0;
-  
-//     .link {
-//       color: #34a4a7;
-//       text-decoration: none;
-//     }
-//     a{
-//        text-decoration: none;
-//     }
-//     .link:hover,
-//     .link:active {
-      
-//     }
-//   }
-
-//   .nav-btn {
-//     background: transparent;
-//     border: none;
-//     display: flex;
-//     visibility: hidden;
-//     opacity: 0;
-//     cursor: pointer;
-//     position: fixed;
-//     top: 2rem;
-//     right: 2rem;
-//   }
-
-//   .access-code {
-//     display: flex;
-//     align-items: center;
-//     gap: 1rem;
-
-//     .btn {
-//       font-family: 'poppins';
-//       font-weight: 500;
-//       color: #ffff;
-//       background: #0c6cff;
-//       border: none;
-//       border-radius: 5px;
-//       padding: 0.5rem 1rem;
-//     }
-
-//     input {
-//       border: 0px solid transparent;
-//       border-radius: 5px;
-//       padding: 0.5rem 1rem;
-//       color: #000;
-//     }
-//   }
-// }
-
-// // PAGES---------
-// .section1 {
-
-//   height: 100vh;
-//   display: flex;
-//   // justify-content: space-evenly;
-//   align-items: center;
-//   // color: #ffffff;
-
-//   .heading {
-//     // width: 30%;
-//     padding: 1rem;
-//     // background: #000;
-//   }
-
-//   .section1-title {
-//     font-weight: 600;
-//     color: #273e6c;
-//     // background: #000;
-//     font-size: 5rem;
-//   }
-
-//   .section1-subtitle {
-//     color: #399ebc;
-//     margin-top: 20px;
-//     font-size: 1.4rem;
-//     font-weight: 600;
-//     // background: #c67b7b;
-//   }
-//   .section1-desc {
-//     color: #34a4a7;
-//   }
-
-//   // background-color: #0c6cff;
-// }
-
-// //maps
-// #map-container {
-//   display: flex;
-//   justify-content: flex-end;
-//   padding: 10px;
-// }
-
-// .leaflet-container {
-//   height: 600px;
-//   width: 30%;
-// }
-
-// .cluster-icon {
-//   width: 3rem;
-//   height: 3rem;
-//   display: flex;
-//   align-items: center;
-//   justify-content: center;
-//   border-radius: 50%;
-//   font-weight: 600;
-//   padding: 0.4rem;
-//   color: #ffff;
-//   background: radial-gradient(
-//     circle,
-//     rgba(34, 124, 201, 1) 0%,
-//     rgba(48, 128, 202, 1) 56%,
-//     rgba(46, 109, 150, 1) 100%
-//   );
-// }
-
-// @media only screen and (max-width: 1024px) {
-//   .page-container {
+    #map-container {
+      margin-top: 3rem;
+      justify-content: center;
+      width: 400px;
     
-//     .bg {
-//       height: 100vh;
-//       object-fit: cover;
-//     }
-//     .header {
-//       flex-direction: column;
-
-//       .logo {
-//         width: 100%;
-//         font-size: 0.8rem;
-
-//         img {
-//           width: 4rem;
-//         }
-//         h1 {
-//           display: none;
-//         }
-//       }
-
-//       nav {
-//         display: flex;
-//         position: fixed;
-//         top: 5rem;
-//         left: 0;
-      
-//         height: 100vh;
-//         width: 100%;
-        
-//         padding-top: 20px;
-//         flex-direction: column;
-
-//         transition: 0.5s;
-//         transform: translateY(-100vh);
-
-//         .nav-close-btn {
-//           position: absolute;
-//           top: 2rem;
-//           right: 2rem;
-//         }
-
-//         Link {
-//           font-size: 2rem;
-//           color: #283e71;
-//         }
-
-//         Link:hover {
-//           transform: scale(1.5);
-//         }
-//       }
-
-//       .responsive_nav {
-//         transform: none;
-//         backdrop-filter: blur(10px);
-//       }
-
-//       .nav-btn {
-//         visibility: visible;
-//         opacity: 1;
-//       }
-
-//       .nav-btn:hover {
-//         transform: scale(1.5);
-//         transition: ease-in-out;
-//       }
-
-//       .access-code {
-//         * {
-//           display: none;
-//         }
-//       }
-//     }
-    
-    
-//   }
-
-//   .section1 {
-//     background: #000;
-//     display: flex;
-//     width: 100%;
-    
-//     flex-direction: column;
-//     margin-top: 100px;
-//     padding: 0 10px;
-    
-//     .heading {
-//     display: flex;
-//     flex-direction: column;
-//     margin:0;
-//     width: 100%;
-//     }
-//     .section1-title {
-//       line-height: 50px;
-//       font-size: 4rem;
-//       padding: 20px 0;
-//     }
-//     .section1-subtitle {
-//       margin: 0;
-//     }
-//     .video_container {
-//       display: flex;
-//       justify-content: center;
-
-//       align-items: center;
-//     }
-//   }
-//   .section2 {
-//     flex-direction: column;
-//     overflow: hidden;
-//     #map-container {
-//       justify-content: center;
-//       .leaflet-container {
-//         width: 70%;
-//         justify-content: center;
-//       }
-//     }
-//   }
-//   leaflet-container {
-//     height: auto;
-//   }
-// }
+      .leaflet-container {
+        height: 40vh;
+        width: 100%;
+        justify-content: center;
+      }
+    }
+  }
+}

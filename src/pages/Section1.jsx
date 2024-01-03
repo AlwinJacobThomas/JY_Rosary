@@ -1,27 +1,19 @@
 import React from 'react'
-import YouTube from 'react-youtube'
+
 
 const Section1 = () => {
-  const opts = {
-    height: '100%',
-    width: '100%',
-    playerVars: {
-      autoplay: 0,
-    },
-  };
+ 
 
   return (
     <div className="section1">
       <div className="heading"> 
-        <h1 className="section1-title">Sacred Journey:</h1>
-        <h3 className="section1-subtitle">Pray with Mama Mary</h3>
-        <p className="section1-desc">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nobis, molestiae! Ratione itaque culpa, eaque laboriosam praesentium eos, expedita animi, tempora quaerat debitis sed odit! Blanditiis vero dolores debitis provident soluta.</p>
+        <h1 className="section1-title"><span>Knights</span> of the Kingdom: </h1>
+        {/* <h3 className="section1-subtitle">Empowering Campuses with the Rosary</h3> */}
+        <p className="section1-desc">"Knights of the Kingdom is a passionate initiative dedicated to fostering devotion to Mary and instilling the habit of praying the rosary  as a powerful weapon against the challenges of the modern world.We will be serving as modern-day knights of the Kingdom of God, carrying it to our Campuses. <br /><br />Join us in the mission to spread the love and protection of Mary, building a community of prayer warriors on campuses."</p>
       </div>
-      {/* <iframe className="video"
-         src="https://www.youtube.com/watch?v=m77D52rIwVE">
-      </iframe> */}
+    
       <div className="video_container">
-        <YouTube videoId='m77D52rIwVE'opts={opts} />
+        <iframe width="100%" height="100%" src="https://www.youtube.com/embed/m77D52rIwVE?si=N0_mtjnUkklcBtgp" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
       </div>
       
     </div>

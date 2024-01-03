@@ -1,1 +1,179 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&display=swap");/*# sourceMappingURL=index.css.map */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Montserrat:wght@100;200;300;400;500;600&family=Ubuntu:wght@300;400;500;700&display=swap");
+.section1 {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 10px;
+  padding: 10px;
+  color: #fff;
+  font-family: "Ubuntu", sans-serif;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.749)), url("https://wp.en.aleteia.org/wp-content/uploads/sites/2/2017/08/web3-rosary-praying-devotion-ruggiero-scardigno-via-shutterstock_115129918.jpg");
+  background-size: contain;
+}
+.section1 .heading {
+  width: 35%;
+}
+.section1 .heading .section1-title {
+  font-family: "Ubuntu", sans-serif;
+}
+.section1 .heading .section1-title span {
+  font-family: "Ubuntu", sans-serif;
+  color: #34a4a7;
+  font-weight: 600;
+}
+.section1 .heading .section1-subtitle {
+  margin-top: 1rem;
+}
+.section1 .heading .section1-desc {
+  margin: 0;
+  text-align: left;
+  margin-top: 2rem;
+  font-family: "Montserrat", sans-serif;
+}
+.section1 .video_container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40rem;
+  height: 25rem;
+}
+
+.section2 {
+  height: 100vh;
+  padding: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 10px;
+  background: #fdfdfd;
+  color: #34a4a7;
+}
+.section2 .info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 10px;
+}
+.section2 .info-containers {
+  padding: 10px;
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+  border-radius: 10px;
+  border: 1px solid #34a4a7;
+}
+.section2 .info-containers p {
+  margin: 0;
+  text-align: left;
+}
+.section2 .info-containers h2 {
+  margin: 0;
+}
+.section2 .info-containers:hover {
+  background: #34a4a7;
+  color: #fff;
+}
+
+.section3 {
+  color: #34a4a7;
+  height: 100vh;
+  padding: 2rem;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.section3 .title {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.section3 #map-container {
+  margin-top: 3rem;
+  display: flex;
+  justify-content: space-evenly;
+  padding: 10px;
+  width: 100%;
+}
+.section3 .leaflet-container {
+  height: 70vh;
+  width: 80%;
+}
+.section3 .cluster-icon {
+  width: 3rem;
+  height: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  font-weight: 600;
+  padding: 0.4rem;
+  color: white;
+  background: radial-gradient(circle, rgb(34, 124, 201) 0%, rgb(48, 128, 202) 56%, rgb(46, 109, 150) 100%);
+}
+
+@media only screen and (max-width: 1024px) {
+  .section1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.786), rgba(0, 0, 0, 0.252)), url("https://angelusnews.com/wp-content/uploads/2019/09/y4tr14acs_shutterstock_235763467.jpg");
+    background-size: contain;
+    background-position: 900px;
+    justify-content: flex-start;
+    height: auto;
+  }
+  .section1 .heading {
+    display: flex;
+    width: auto;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px;
+    color: #fff;
+    font-family: "Ubuntu", sans-serif;
+  }
+  .section1 .heading .section1-title span {
+    color: #34a4a7;
+    font-family: "Ubuntu", sans-serif;
+  }
+  .section1 .heading .section1-subtitle {
+    margin-top: 1rem;
+  }
+  .section1 .heading .section1-desc {
+    margin: 0;
+    text-align: left;
+    margin-top: 2rem;
+  }
+  .section1 .video_container {
+    margin-top: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 23rem;
+    height: 12rem;
+    border: 4px solid #34a4a7;
+    border-radius: 10px;
+  }
+  .section2 {
+    color: #34a4a7;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-size: contain;
+    background-position: 900px;
+    justify-content: flex-start;
+    height: auto;
+  }
+  .section3 #map-container {
+    margin-top: 3rem;
+    justify-content: center;
+    width: 400px;
+  }
+  .section3 #map-container .leaflet-container {
+    height: 40vh;
+    width: 100%;
+    justify-content: center;
+  }
+}/*# sourceMappingURL=index.css.map */
