@@ -21,10 +21,10 @@ function App() {
       path: "map",
       element: <Section2 />,
     },
-    {
-      path: "rosary/:token",
-      element: <Rosary />,
-    },
+    // {
+    //   path: "rosary/:token",
+    //   element: <Rosary />,
+    // },
   ]);
 
   return <RouterProvider router={router} />;
