@@ -75,7 +75,7 @@ const MapFinal = ({ rosaryData }) => {
 
           {/* chunkedLoading is used to avoid massive loading */}
 
-          {rosaryData.map((locationData, index) => {
+          {/* {rosaryData.map((locationData, index) => {
             const locations = locationData.locations || [];
             const lastLocation =
               locations.length > 0
@@ -104,7 +104,43 @@ const MapFinal = ({ rosaryData }) => {
                   ]}
                   icon={getLastLocationIcon()}
                 >
-                  <Popup>{`RosaryNow${locationData.zone}`}</Popup>
+                  <Popup>{`${locationData.zone}`}</Popup>
+                </Marker>
+              );
+
+            return [...defaultMarkers, lastMarker];
+          })} */}
+
+          {rosaryData.map((locationData, index) => {
+            const locations = locationData.locations || [];
+            const lastLocation =
+              locations.length > 0 ? locations[locations.length - 1] : null;
+
+            // Map default locations
+            const defaultMarkers = locations
+              .slice(0, locations.length - 1) // Exclude the last location
+              .map((location, subIndex) => (
+                <Marker
+                  key={`marker-${index}-${subIndex}`}
+                  position={[location.latitude, location.longitude]}
+                  icon={getDefaultIcon()}
+                >
+                  <Popup>{locationData.zone}</Popup>
+                </Marker>
+              ));
+
+            // Map last location with a different icon
+            const lastMarker =
+              lastLocation && (
+                <Marker
+                  key={`last-marker-${index}`}
+                  position={[
+                    lastLocation.latitude,
+                    lastLocation.longitude,
+                  ]}
+                  icon={getLastLocationIcon()}
+                >
+                  <Popup>{`${locationData.zone}`}</Popup>
                 </Marker>
               );
 

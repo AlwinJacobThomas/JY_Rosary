@@ -96,17 +96,19 @@
   }
   //maps
   #map-container {
-    margin-top: 3rem;
+    
     display: flex;
     justify-content: space-evenly;
     padding: 10px;
-
     width: 100%;
   }
 
   .leaflet-container {
     height: 70vh;
     width: 80%;
+    background: red;
+    
+    display: flex;
   }
 
   .cluster-icon {
