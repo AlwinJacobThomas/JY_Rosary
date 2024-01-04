@@ -4,6 +4,7 @@ import './App.css';
 import Section2 from './pages/Section2';
 import Rosary from './pages/Rosary';
 import CountdownTimer from "./pages/ComingSoon";
+import Updation from "./pages/Updation";
 
 function App() {
   const router = createBrowserRouter([
@@ -22,9 +23,13 @@ function App() {
       element: <Section2 />,
     },
     // {
-    //   path: "rosary/:token",
-    //   element: <Rosary />,
+      // path: "rosary/:token",
+      // element: <Rosary />,
     // },
+    {
+      path: "rosary/:token",
+      element: <Updation />,
+    },
   ]);
 
   return <RouterProvider router={router} />;

@@ -1,8 +1,10 @@
 import { useState, useEffect } from 'react';
+import { useParams } from 'react-router-dom';
 
 function ErrorBoundary({ children }) {
   const [hasError, setHasError] = useState(false);
-
+  
+  
   useEffect(() => {
     const handleErrors = (error) => {
       if (
