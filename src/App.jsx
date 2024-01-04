@@ -14,10 +14,10 @@ function App() {
       // element: <NavBar />,
       // children: [{ path: "", element: <Home /> }],
     },
-    {
-      path: "*",
-      element: <CountdownTimer/>,
-    },
+    // {
+    //   path: "*",
+    //   element: <CountdownTimer/>,
+    // },
     {
       path: "map",
       element: <Section2 />,

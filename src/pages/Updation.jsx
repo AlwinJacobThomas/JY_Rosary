@@ -1,10 +1,12 @@
 import { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
+
+import { useNavigate, useParams } from 'react-router-dom';
 import Nav from './../Components/Nav';
 import firebase from './../firebase/config';
 
-const Updation = () => {
 
+const Updation = () => {
+    const navigate = useNavigate();
     const [rosary, setRosary] = useState(null)
     const { token } = useParams()
     const [formData, setFormData] = useState({ names: '', decades: '' });
@@ -70,6 +72,8 @@ const Updation = () => {
 
                 // Fetch updated data
                 await fetchRosaryData();
+                
+                navigate("/");
             }
         } catch (err) {
             console.error(err);
@@ -89,7 +93,7 @@ const Updation = () => {
     return (
         <div className="updation-container">
             <Nav />
-
+            
             <div className="form">
                 <h1 className='form-title'>Rosary Update</h1>
                 <div className="data">

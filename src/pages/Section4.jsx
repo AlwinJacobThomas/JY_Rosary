@@ -24,9 +24,9 @@ const Section4 = () => {
     }
   };
 
-  // useEffect(() => {
-  //   fetchRosaryData();
-  // }, []);
+  useEffect(() => {
+    fetchRosaryData();
+  }, []);
   const fillTable = () => {
     return rosaryData.map((rosary, index) => (
       <div className="table-row" key={`row-${index}`}>
@@ -42,14 +42,14 @@ const Section4 = () => {
     <div className="section4">
       <div className="title">
         <h1>Statistics</h1>
-        <h3>Locations</h3>
-        <button className="btn" onClick={fetchRosaryData} >Click</button>
+        <h3>Decades prayed </h3>
+        {/* <button className="btn" onClick={fetchRosaryData} >Click</button> */}
       </div>
       <div className="table">
         <div className="table-head">
           <h3 className='value-zone'>Zone</h3>
           <h3 className='value-name'>Rosary Name</h3>
-          <h3 className='value-count'>Rosary Count</h3>
+          <h3 className='value-count'>Decade Count</h3>
           {/* document.decades/5(round of to int) */}
         </div>
         <div className="table-body">
