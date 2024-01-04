@@ -8,16 +8,21 @@ const Section2 = () => {
       <div className="info">
         <div className="info-containers">
           <h2>01</h2>
-          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Et, nostrum! Ipsa cum similique neque atque, voluptate repudiandae, sint nulla illum aliquam exercitationem, quam minima optio velit magni suscipit quod labore.</p>
+          <p>Pray some decades of Rosary on the beads and scan its QR code to log its location</p>
         </div>
         <div className="info-containers">
           <h2>02</h2>
-          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Et, nostrum! Ipsa cum similique neque atque, voluptate repudiandae, sint nulla illum aliquam exercitationem, quam minima optio velit magni suscipit quod labore.</p>
+          <p>Enter the number of decades you have prayed</p>
         </div>
         <div className="info-containers">
           <h2>03</h2>
-          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Et, nostrum! Ipsa cum similique neque atque, voluptate repudiandae, sint nulla illum aliquam exercitationem, quam minima optio velit magni suscipit quod labore.</p>
+          <p>Have a look at the map if you want to know of the decades of the Rosaries recited across Kerala</p>
         </div>
+        <div className="info-containers">
+          <h2>04</h2>
+          <p>Handover the rosary to another person and continue the same</p>
+        </div>
+
       </div>
       {/* <Map /> */}
     </div>

@@ -100,12 +100,11 @@
     display: flex;
     justify-content: space-evenly;
     padding: 10px;
-    
+
     width: 100%;
   }
 
   .leaflet-container {
-   
     height: 70vh;
     width: 80%;
   }
@@ -118,14 +117,81 @@
     justify-content: center;
     border-radius: 50%;
     font-weight: 600;
-    padding: 0.4rem;
-    color: #ffff;
+    padding: 1rem;
+    color: #ffffff;
     background: radial-gradient(
       circle,
-      rgba(34, 124, 201, 1) 0%,
-      rgba(48, 128, 202, 1) 56%,
+      #2e6d96 0%,
+      #2e6d96 56%,
       rgba(46, 109, 150, 1) 100%
     );
+  }
+}
+.section4 {
+  // background: #ffff;
+  color: #34a4a7;
+  height: 100vh;
+  padding: 2rem 0;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 3rem;
+  .title {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+  }
+
+  .table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px;
+    padding: 3rem;
+
+    .table-head,
+    .table-body {
+      display: flex;
+    }
+
+    .table-head {
+      width: 100%;
+      align-items: center;
+      background: #fefefe;
+      border: 1px solid #ddd;
+    }
+    .table-body {
+      flex-direction: column;
+    }
+    .table-row {
+      width: 100%;
+      background: #936565;
+      display: flex;
+      width: 100%;
+    }
+    .value-zone {
+      width: 50%;
+      text-align: center;
+    }
+    .value-name {
+      width: 30%;
+      text-align: center;
+    }
+    .value-count {
+      text-align: center;
+      width: 20%;
+    }
+    .table-head h3 {
+      padding: 2rem;
+    }
+    .table-row p {
+      background: #000;
+      padding: 1rem;
+      margin: 0;
+    }
+    .table-row:nth-child(even) {
+      background-color: #f9f9f9;
+    }
   }
 }
 @media only screen and (max-width: 1024px) {
@@ -192,18 +258,69 @@
     justify-content: flex-start;
     height: auto;
   }
-  .section3{
-    
+  .section3 {
     #map-container {
       margin-top: 3rem;
       justify-content: center;
       width: 400px;
-    
+
       .leaflet-container {
         height: 40vh;
         width: 100%;
         justify-content: center;
       }
     }
+  }
+  .section4 {
+    
+    .table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0px;
+    padding: 1rem;
+    
+    .table-head,
+    .table-body {
+      display: flex;
+    
+    }
+
+    .table-head {
+      width: 100%;
+      align-items: center;
+      background: #fefefe;
+    }
+    .table-body {
+      flex-direction: column;
+    }
+    .table-row {
+      
+      background: #936565;
+      display: flex;
+      width: 100%;
+    }
+    .value-zone {
+      width: 50%;
+      text-align: center;
+    }
+    .value-name {
+      width: 25%;
+      text-align: center;
+    }
+    .value-count {
+      text-align: center;
+      width: 25%;
+    }
+    .table-head h3 {
+      padding: 1rem;
+      border: none;
+    }
+    .table-row p {
+      background: #000;
+      border: none;
+      // padding: 1rem;
+      margin: 0;
+    }
+  }
   }
 }
