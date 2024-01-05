@@ -23,7 +23,7 @@ const Section3 = () => {
   }, []);
   
   return (
-    <div className="section3">
+    <div className="section3" id='map'>
       <div className="title">
         <h1>Rosary Map</h1>
         <h3>See where the rosary is right now!</h3>

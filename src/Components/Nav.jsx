@@ -42,16 +42,17 @@ const Nav = () => {
             <ul className={`full_nav ${navOpen && 'active'}`}>
                 <button className="full_nav_close_btn" onClick={() => setNavOpen(navOpen ? false : true)}><AiOutlineClose /> </button>
                 <li>
-                    <a href="">HOME</a>
+                    <a href="/">HOME</a>
                 </li>
                 <li>
-                    <a href="">CONTACT</a>
+                    <a href="#map">MAP</a>
                 </li>
                 <li>
-                    <a href="">MAP</a>
+                    <a href="#about">ABOUT</a>
                 </li>
+                
                 <li>
-                    <a href="">ABOUT</a>
+                    <a href="#section2">HoW To</a>
 
                 </li>
             </ul>

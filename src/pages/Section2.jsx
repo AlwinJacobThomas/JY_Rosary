@@ -12,7 +12,7 @@ const Section2 = () => {
         </div>
         <div className="info-containers">
           <h2>02</h2>
-          <p>Enter the number of decades you have prayed</p>
+          <p>Enter your name and the number of decades you have prayed</p>
         </div>
         <div className="info-containers">
           <h2>03</h2>

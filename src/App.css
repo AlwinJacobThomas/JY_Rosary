@@ -198,6 +198,9 @@
     .full_nav {
         padding-top: 5rem;
         gap: 10vh;
+        
+        width: 100%;
+        z-index: 9999;
     }
 }
 

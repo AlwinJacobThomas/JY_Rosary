@@ -109,11 +109,13 @@ const Updation = () => {
                 </div >
                 <div className="form-section">
                     <label htmlFor="names" className='label' >Enter your name :</label>
-                    <input className='input' type="text" id="names" placeholder="John" onChange={handleInputChange} />
-                    <label htmlFor="decades">Number of decades prayed :</label>
+                    <input className='input' type="text" id="names" placeholder="John Thomas" onChange={handleInputChange} />
+                    <label htmlFor="decades" className='label'>Number of decades prayed :</label>
                     <input className='input' placeholder='0' type="number" id="decades" onChange={handleInputChange} />
                     {/* <h3>{currentLocation.lat}--{currentLocation.long}</h3> */}
+                    <p className="note">* Allow location for locating the rosary in the map!</p>
                     <button className="btn" onClick={updatePrayer}>Update Prayer</button>
+                    
                 </div>
             </div>
 

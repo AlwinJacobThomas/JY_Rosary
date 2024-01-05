@@ -7,6 +7,7 @@
 //  color: #399ebc;
 .section1 {
   height: 100vh;
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -193,6 +194,30 @@
       background-color: #f9f9f9;
     }
   }
+  .about {
+    color: #2e6d96;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+    padding: 1rem;
+    text-align: center;
+    .social {
+      border-top:2px solid #fff;
+      width: 50%;
+      
+      margin: 2rem 0;  
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      
+      svg{
+        fill: #fff;
+      }
+    }
+  }
 }
 //------- updation start-----------
 
@@ -200,13 +225,14 @@
   height: 100vh;
   background: #f0eded;
 
-
   padding: 4rem;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-
+  .note{
+      color: #686868;
+    }
   .form {
     display: flex;
     flex-direction: column;
@@ -219,7 +245,7 @@
     .form-title {
       margin: 2rem 0;
       padding: 0;
-      
+
       color: #34a4a7;
     }
 
@@ -237,21 +263,22 @@
       font-weight: 600;
       padding: 1rem;
       border: none;
-      margin: 2rem 0;
+      margin: 1rem 0;
     }
   }
-  .form-section{
+  .form-section {
     display: flex;
     flex-direction: column;
     justify-content: center;
   }
   .label {
     color: #000;
-     
+    font-weight: bold;
     margin-top: 1rem;
   }
   .data {
     color: #34a4a7;
+    margin: 1rem 0;
     span {
       color: #34a4a7;
     }
@@ -339,6 +366,7 @@
     }
   }
   .section4 {
+    width: 100%;
     .table {
       width: 100%;
       border-collapse: collapse;
@@ -364,7 +392,7 @@
         width: 100%;
       }
       .value-zone {
-        width: 50%;
+        width: 45%;
         text-align: center;
       }
       .value-name {
@@ -373,7 +401,7 @@
       }
       .value-count {
         text-align: center;
-        width: 25%;
+        width: 30%;
       }
       .table-head h3 {
         padding: 1rem;
@@ -393,7 +421,8 @@
     width: 100%;
     height: fit-content;
     margin: 1rem 0;
-    background:  #fff;
+    background: #fff;
+    
     .form {
       margin: 4rem;
     }

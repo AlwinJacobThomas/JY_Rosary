@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-
+import { GrInstagram } from "react-icons/gr";
 // import { useParams } from 'react-router-dom';
 import Map from '../Components/map/Map'
 import MapFinal from '../Components/map/Map'
@@ -56,6 +56,13 @@ const Section4 = () => {
              {fillTable()}
            
           
+        </div>
+      </div>
+      <div className="about" id="about">
+        <h3>An initiative of Jesus Youth Kerala Campus Ministry</h3>
+        <div className="social">
+          <p>Follow us on :</p>
+          <a href="https://www.instagram.com/kerala_campus_ministry/"><GrInstagram /></a>
         </div>
       </div>
     </div>
