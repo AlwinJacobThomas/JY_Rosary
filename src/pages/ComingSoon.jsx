@@ -14,6 +14,7 @@ const ComingSoon = () => {
                     size='large'
                     endAt={'2024-01-05 00:00:00'}
                 />
+                <a href="/">Go to Home</a>
             </div>
             <p>Jesus Youth Kerala Campus Ministry</p>
             <div class="icons">
