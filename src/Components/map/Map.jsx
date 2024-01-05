@@ -65,7 +65,7 @@ const MapFinal = ({ rosaryData }) => {
                   position={[location.latitude, location.longitude]}
                   icon={getDefaultIcon()}
                 >
-                  <Popup>{locationData.zone}</Popup>
+                  <Popup>{`${locationData.name} - ${locationData.zone}`}</Popup>
                 </Marker>
               ));
 
@@ -73,14 +73,14 @@ const MapFinal = ({ rosaryData }) => {
             const lastMarker =
               lastLocation && (
                 <Marker
-                  key={`last-marker-${index}`}
+                  key={`last-marker-${index}--${locationData.zone}`}
                   position={[
                     lastLocation.latitude,
                     lastLocation.longitude,
                   ]}
                   icon={getLastLocationIcon()}
                 >
-                  <Popup>{`${locationData.zone}`}</Popup>
+                  <Popup>{`${locationData.name} - ${locationData.zone}`}</Popup>
                 </Marker>
               );
 
