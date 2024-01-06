@@ -10,7 +10,7 @@ const Updation = () => {
     const [rosary, setRosary] = useState(null)
     const { token } = useParams()
     const [formData, setFormData] = useState({ names: '', decades: '' });
-    const [currentLocation, setCurrentLocation] = useState({ lat: 9.232, long: 3.44 })
+    const [currentLocation, setCurrentLocation] = useState(null)
     useEffect(() => {
         const successCallback = (position) => {
             setCurrentLocation({
@@ -53,7 +53,8 @@ const Updation = () => {
                     console.error("Invalid decades value");
                     return;
                 }
-
+                // Check if geolocation is available
+                const locationAvailable = currentLocation !== null;
                 // Update users array in the document
                 const updatedUsers = [...rosary.users, { names: formData.names, decades: decadesToAdd }];
 
@@ -61,7 +62,23 @@ const Updation = () => {
                 const newDecades = rosary.decades + decadesToAdd;
 
                 // Append the user's location to the locations array
-                const updatedLocations = [...rosary.locations, { latitude: currentLocation.lat, longitude: currentLocation.long }];
+                //const updatedLocations = [...rosary.locations, { latitude: currentLocation.lat, longitude: currentLocation.long }];
+                //-----------------------
+                // Fetch the default location from Firestore
+                const defaultLocationSnapshot = await firebase.firestore()
+                    .collection('rosary').doc(token).get();
+                const defaultLocation = defaultLocationSnapshot.data().defaultLocation;
+
+                // Append the user's location to the locations array if available
+                const updatedLocations = locationAvailable
+                    ? [...rosary.locations, { latitude: currentLocation.lat, longitude: currentLocation.long }]
+                    : [...rosary.locations];
+
+                // If geolocation is not available, update with default location
+                if (!locationAvailable) {
+                    updatedLocations.push(defaultLocation);
+                    console.log("----------" + updatedLocations)
+                }
 
                 // Update the document
                 await firebase.firestore().collection('rosary').doc(token).update({
@@ -72,7 +89,7 @@ const Updation = () => {
 
                 // Fetch updated data
                 await fetchRosaryData();
-                
+
                 navigate("/");
             }
         } catch (err) {
@@ -93,7 +110,7 @@ const Updation = () => {
     return (
         <div className="updation-container">
             <Nav />
-            
+
             <div className="form">
                 <h1 className='form-title'>Rosary Update</h1>
                 <div className="data">
@@ -115,7 +132,7 @@ const Updation = () => {
                     {/* <h3>{currentLocation.lat}--{currentLocation.long}</h3> */}
                     <p className="note">* Allow location for locating the rosary in the map!</p>
                     <button className="btn" onClick={updatePrayer}>Update Prayer</button>
-                    
+
                 </div>
             </div>
 
