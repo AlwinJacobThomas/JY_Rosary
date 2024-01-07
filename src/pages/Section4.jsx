@@ -12,7 +12,7 @@ const Section4 = () => {
   const [rosaryData, setRosaryData] = useState([]);
   // Create a reference to the 'rosary' collection
   const rosaryCollection = firebase.firestore().collection('rosary');
-
+  const [totalDecades, setTotalDecades] = useState(0);
 
   const fetchRosaryData = async () => {
     try {
@@ -36,6 +36,29 @@ const Section4 = () => {
       </div>
     ));
   };
+  const getSumOfDecades = async () => {
+    try {
+      const snapshot = await firebase.firestore().collection('rosary').get();
+      let totalDecades = 0;
+
+      snapshot.forEach((doc) => {
+        const data = doc.data();
+        totalDecades += data.decades || 0;
+      });
+      setTotalDecades(totalDecades);
+      console.log('Total Decades:', totalDecades);
+      return totalDecades;
+    } catch (error) {
+      console.error('Error getting sum of decades:', error);
+      throw error;
+    }
+  };
+
+  // Call the function
+
+  useEffect(() => {
+    getSumOfDecades();
+  }, []);
 
 
   return (
@@ -43,7 +66,7 @@ const Section4 = () => {
       <div className="title">
         <h1>Statistics</h1>
         <h3>Decades prayed </h3>
-        {/* <h1 className='total'>300003</h1> */}
+        <h1 className='total'>{totalDecades}</h1>
         {/* <button className="btn" onClick={fetchRosaryData} >Click</button> */}
       </div>
       <div className="table">
@@ -54,9 +77,9 @@ const Section4 = () => {
           {/* document.decades/5(round of to int) */}
         </div>
         <div className="table-body">
-             {fillTable()}
-           
-          
+          {fillTable()}
+
+
         </div>
       </div>
       <div className="about" id="about">
