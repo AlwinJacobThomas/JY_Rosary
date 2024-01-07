@@ -43,6 +43,7 @@ const Section4 = () => {
       <div className="title">
         <h1>Statistics</h1>
         <h3>Decades prayed </h3>
+        {/* <h1 className='total'>300003</h1> */}
         {/* <button className="btn" onClick={fetchRosaryData} >Click</button> */}
       </div>
       <div className="table">

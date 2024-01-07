@@ -6,7 +6,7 @@ import { icon, divIcon } from 'leaflet';
 
 const MapFinal = ({ rosaryData }) => {
   const [center, setCenter] = useState([10.23604, 76.51952]);
-  const zoom = 6;
+  const zoom = 9.008;
 
 
 
@@ -45,9 +45,9 @@ const MapFinal = ({ rosaryData }) => {
         />
 
         {/* chunkedLoading is used to avoid massive loading */}
-        <MarkerClusterGroup
+        {/* <MarkerClusterGroup
           chunkedLoading
-          iconCreateFunction={createCustomClusterIcon}>
+          iconCreateFunction={createCustomClusterIcon}> */}
           {/* "icon={customIcon}" use this for custom icon */}
 
 
@@ -86,7 +86,7 @@ const MapFinal = ({ rosaryData }) => {
 
             return [...defaultMarkers, lastMarker];
           })}
-        </MarkerClusterGroup>
+        {/* </MarkerClusterGroup> */}
 
 
 
