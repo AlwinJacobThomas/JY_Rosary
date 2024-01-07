@@ -6,7 +6,7 @@ import { icon, divIcon } from 'leaflet';
 
 const MapFinal = ({ rosaryData }) => {
   const [center, setCenter] = useState([10.23604, 76.51952]);
-  const zoom = 9.008;
+  const zoom = 7.89;
 
 
 
@@ -23,8 +23,8 @@ const MapFinal = ({ rosaryData }) => {
   const getDefaultIcon = () =>
     icon({
       iconUrl: '/assets/images/pin.svg',
-      iconSize: [30, 50],
-      iconAnchor: [15, 30],
+      iconSize: [20, 20],
+      iconAnchor: [0, 15],
     });
 
   const getLastLocationIcon = () =>
