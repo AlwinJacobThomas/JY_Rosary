@@ -44,11 +44,11 @@ const MapFinal = ({ rosaryData }) => {
           attribution='<a href="https://www.openstreetmap.org/copyright" target="_blank">&copy; OpenStreetMap contributors</a>'
         />
 
-        {/* chunkedLoading is used to avoid massive loading */}
-        {/* <MarkerClusterGroup
+         {/* chunkedLoading is used to avoid massive loading */}
+        <MarkerClusterGroup
           chunkedLoading
-          iconCreateFunction={createCustomClusterIcon}> */}
-          {/* "icon={customIcon}" use this for custom icon */}
+          iconCreateFunction={createCustomClusterIcon}>
+          { /* "icon={customIcon}" use this for custom icon */}
 
 
           {rosaryData.map((locationData, index) => {
@@ -86,7 +86,7 @@ const MapFinal = ({ rosaryData }) => {
 
             return [...defaultMarkers, lastMarker];
           })}
-        {/* </MarkerClusterGroup> */}
+          </MarkerClusterGroup>
 
 
 
